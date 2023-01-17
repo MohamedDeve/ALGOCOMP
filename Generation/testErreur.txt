@@ -1,0 +1,60 @@
+algo testAlgo 
+VARS 
+    var1,var2,var3:entier; var4:caractere; var5:chaine; var2:entier; 
+CSTS 
+    const1 = 34:entier;
+    const2 = "compilation":chaine;
+    const3 = "c":caractere;
+DEBUT
+    var1 = 77;
+    var2 = var1 + var3;
+    const1 = var1 + 200;
+    var5 = "ours de " + const2;
+    var2 = const3 + var1;
+    var5 = const3 + var5;
+
+    ECRIRE("var5 = ",var5);
+    ECRIRE("const1 = ",const1);
+
+    SI (const1 < 100 ET var3 < 55) ALORS
+        var5 = "vrai";
+    SINON
+        var5 = "faux";
+    FIN
+
+    :POUR var1 DE 43 JUSQUA var1 < 56 PAS 3 FAIRE
+        var2 = 77;
+    FIN
+
+    :FAIRE 
+        var2 = 100;
+        :TANTQUE (var1 < 56 ET var1 == 99) FAIRE
+            :FAIRE
+                LIRE(var3:entier,var4:caractere);
+                LIRE(var6:chaine);
+            TANTQUE (const3 == "c") FIN
+            var1 = 34;
+        FIN
+        var2 = 300;
+    TANTQUE (var2 <= 500) FIN
+
+    FONCTION fonct1 ( const1:entier,var5:chaine ):entier
+        VARS 
+            var6:entier; 
+            var7:reel; 
+            var1:chaine;
+        CSTS 
+            const4 = 100:entier;
+            const5 = 22.67:reel;
+            const6 = " syntaxique":chaine;
+        DEBUT 
+            var1 = "analyse";
+            var1 = var1 + const6;
+            var3 = 100;
+            ECRIRE("const6 = ",const6);
+            const5 = 43.55;
+            RETOURNE const4;
+        FIN
+
+    var5 = :fonct1(33,var5);
+FIN
